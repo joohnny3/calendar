@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100&family=Rubik+Pixels&display=swap");
 body {
-  background-image: url(https://picsum.photos/1920/1080);
-  /* background-image: url(./image/background.png); */
+  /* background-image: url(https://picsum.photos/1920/1080); */
+  background-image: url(./image/ground.jpg);
+  background-size:cover ;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -11,54 +12,66 @@ body {
   margin: auto;
   background-repeat: no-repeat;
   font-family: "PT Sans Narrow", sans-serif;
-  /* color: rgb(42, 44, 58); */
-  /* color: rgb(96, 21, 28); */
   color: #eee;
 }
-.top {
+.animate__animated {
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 10%;
-  margin-top: 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
+.animate__animated > a{
+  text-decoration: none;
+  cursor: wait;
+  text-decoration: none;
+}
 .year {
   font-size: 35px;
   padding-top: 45px;
   color: #eee;
-  color: black;
+  /* color: black; */
 }
 .month {
+
   font-size: 80px;
   color: #eee;
-  color: black;
 }
+
 .left {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 5%;
 }
 
 .right {
-    position: absolute;
-    top: 50%;
-    right: 6%;
+  position: absolute;
+  top: 45%;
+  right: 5%;
+}
+.left:hover {
+  transform: scale(1.6,1.6);
+  transition:0s,1s;
+}
+.right:hover {
+  transform: scale(1.6,1.6);
+  transition:0s,1s;
 }
 .calendar > div {
-    width: calc(100% / 7);
-    box-sizing: border-box;
-    /* color:#eee; */
+  width: calc(100% / 7);
+  box-sizing: border-box;
 }
-.week{
-    color: rgb(96, 21, 28);
+.week {
+  color: rgb(96, 21, 28);
 }
 
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  height: 50vh;
+  width: 50vw;
+  height: 60vh;
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
   background-size: cover;
@@ -67,7 +80,7 @@ body {
   align-items: center;
   text-align: center;
   font-size: 32px;
-  margin-bottom: 12%;
+  margin-bottom: 10%;
 }
 .calendar::before {
   content: "";
@@ -82,77 +95,100 @@ body {
 .calendar div {
   position: relative;
 }
-.calendar>div:not(.d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,.week):hover{
-    background-size: 40px 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/coffee.png);
-    opacity: 75%;
-    color: black;
+.calendar
+  > div:not(
+    .d1,
+    .d2,
+    .d3,
+    .d4,
+    .d5,
+    .d6,
+    .d7,
+    .d8,
+    .d9,
+    .d10,
+    .d11,
+    .d12,
+    .week
+  ):hover {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/astronaut.png);
+  color: black;
+  cursor: grabbing;
+  /* font-weight: bold; */
+  opacity: 90%;
+  
 }
+
 .today {
-    color: rgb(42, 44, 58);
+  color: rgb(42, 44, 58);
+  opacity:1;
 }
-.d11h{
-    background-size: 45px 45px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/happy-new-year.png);
+.d11h {
+  background-size: 45px 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/happy-new-year.png);
 }
 .d214h {
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/cupid.png);
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/cupid.png);
 }
 .d228h {
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/independence.png);
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/independence.png);
 }
 .d312h {
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/plant-a-tree.png);
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/plant-a-tree.png);
 }
-.d41h{
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/surpise-box.png);
+.d41h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/surpise-box.png);
 }
-.d44h{
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/playtime.png);
+.d44h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/playtime.png);
 }
-.d45h{
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/ancestors.png);
+.d45h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/ancestors.png);
 }
-.d51h{
-    background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/labour-law.png);
+.d51h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/labour-law.png);
 }
-.d928h {  background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/teacher.png);
+.d928h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/teacher.png);
 }
-.d1031h {background-size: 42px 42px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/witch.png)
+.d1031h {
+  background-size: 42px 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/witch.png);
 }
-.d1225h {background-size: 42px 41px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./image/santa-claus.png)
+.d1225h {
+  background-size: 42px 41px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/santa-claus.png);
 }

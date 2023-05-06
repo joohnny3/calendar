@@ -8,6 +8,7 @@
     <link rel="icon" href="./image/calendar.png" type="image/png">
     <title>張董事長的Calendar</title>
     <link rel="stylesheet" href="./calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -50,9 +51,11 @@
     $monthM = date("M", strtotime("$year-$month"));
     ?>
 
-    <div class="top">
+    <div class="animate__animated animate__zoomInDown">
         <div class="month"><?= $monthM; ?></div>
-        <div class="year">&nbsp;<?= $year; ?> </div>
+        <a href="?year=<?= date("Y"); ?>&month=<?= date("n"); ?>">
+            <div class="year">&nbsp;<?= $year; ?> </div>
+        </a>
     </div>
 
     <div>
@@ -85,7 +88,6 @@
                 } else {
                     echo "<div class='today'> {$d} </div>";
                 }
-
             } else {
                 print "<div class='d$month$h'> {$d} </div>";
             }
