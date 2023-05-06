@@ -74,8 +74,18 @@
             $d = ($days[$i] != '&nbsp;') ? explode('-', $days[$i])[2] : '&nbsp;';
             $h = ($days[$i] != '&nbsp;') ? explode('-', $days[$i])[2] . "h" : "";
             if ($today == $days[$i]) {
-                print $holiday[$days[$i]];
-                print "<div class='today'> {$d} </div>";
+
+                if (isset($holiday[$days[$i]])) {
+
+                    echo "<div class='today'> {$d}";
+                    echo "  <div>";
+                    echo $holiday[$days[$i]];
+                    echo "  </div>";
+                    echo "</div>";
+                } else {
+                    echo "<div class='today'> {$d} </div>";
+                }
+
             } else {
                 print "<div class='d$month$h'> {$d} </div>";
             }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100&family=Rubik+Pixels&display=swap");
 body {
-  /* background-image: url(https://picsum.photos/1920/1080); */
-  background-image: url(./image/background.png);
+  background-image: url(https://picsum.photos/1920/1080);
+  /* background-image: url(./image/background.png); */
   display: flex;
   justify-content: center;
   text-align: center;
