@@ -64,8 +64,8 @@ body {
   box-sizing: border-box;
 }
 .week {
-  color: rgb(96, 21, 28);
-  /* color: rgb(42, 44, 58); */
+  /* color: rgb(96, 21, 28); */
+  color: rgb(42, 44, 58);
   text-shadow:1px 1px 4px white;
 }
 
@@ -196,3 +196,7 @@ body {
   background-repeat: no-repeat;
   background-image: url(./image/santa-claus.png);
 }
+.d520h{ background-size: 42px 41px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./image/hair-cut-tool.png);}
