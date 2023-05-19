@@ -53,14 +53,14 @@
 
     <div class="animate__animated animate__zoomInDown">
         <div class="month"><?= $monthM; ?></div>
-        <a href="?year=<?= date("Y"); ?>&month=<?= date("n"); ?>">
+        <a id="reset" href="?year=<?= date("Y"); ?>&month=<?= date("n"); ?>">
             <div class="year">&nbsp;<?= $year; ?> </div>
         </a>
     </div>
 
     <div>
-        <a class="left" href="?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>"><img src="./image/NEWnextL.png" alt="" width="40px"></a>
-        <a class="right" href="?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>"><img src="./image/NEWnextR.png" alt="" width="40px"></a>
+        <a id="myleft" class="left" href="?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>"><img src="./image/NEWnextL.png" alt="" width="40px"></a>
+        <a id="myright" class="right" href="?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>"><img src="./image/NEWnextR.png" alt="" width="40px"></a>
     </div>
 
     <div class='calendar'>
@@ -94,7 +94,32 @@
         }
         ?>
     </div>
+    <script>
+        const left = document.getElementById('myleft');
+        const right = document.getElementById('myright');
+        const reset = document.getElementById('reset');
 
+        // console.log(left);
+        // console.log(right);
+        // console.log(reset);
+
+        document.addEventListener('keydown', (event) => {
+            switch (event.keyCode) {
+                case 37:
+                    location.href = left.href;
+                    break;
+            
+                case 39:
+                    location.href = right.href;
+                    break;
+                
+                case 32:
+                    location.href = reset.href;
+                    break;
+            }
+        });
+
+    </script>
 </body>
 
 </html>
