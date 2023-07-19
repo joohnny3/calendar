@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/calendar.png" type="image/png">
-    <title>Calendar育誠</title>
+    <title>育誠Calendar</title>
     <link rel="stylesheet" href="./calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -22,8 +22,8 @@
     $firstDateWeek = date("w", $firstDateTime);
     $finalDateWeek = date("w", $finalDateTime);
     $weeks = ceil(($days + $firstDateWeek) / 7);
-    // $firstWeekSpace=$firstDateWeek-1;       //計算當前月份第一周的空白日(或前一個月份佔幾天)
     $days = [];
+
     for ($i = 0; $i < $weeks; $i++) {
         for ($j = 0; $j < 7; $j++) {
             if (($i == 0 && $j < $firstDateWeek) || (($i == $weeks - 1) && $j > $finalDateWeek)) {
@@ -34,6 +34,7 @@
             }
         }
     }
+
     if ($month == 1) {
         $prevYear = $year - 1;
         $prevMonth = 12;
@@ -41,6 +42,7 @@
         $prevYear = $year;
         $prevMonth = $month - 1;
     }
+
     if ($month == 12) {
         $nextYear = $year + 1;
         $nextMonth = 1;
@@ -48,6 +50,7 @@
         $nextYear = $year;
         $nextMonth = $month + 1;
     }
+
     $monthM = date("M", strtotime("$year-$month"));
     ?>
 
@@ -57,12 +60,10 @@
             <div class="year">&nbsp;<?= $year; ?> </div>
         </a>
     </div>
-
     <div>
         <a id="myleft" class="left" href="?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>"><img src="./image/NEWnextL.png" alt="" width="40px"></a>
         <a id="myright" class="right" href="?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>"><img src="./image/NEWnextR.png" alt="" width="40px"></a>
     </div>
-
     <div class='calendar'>
         <div class="week">Sun</div>
         <div class="week">Mon</div>
@@ -99,26 +100,22 @@
         const right = document.getElementById('myright');
         const reset = document.getElementById('reset');
 
-        // console.log(left);
-        // console.log(right);
-        // console.log(reset);
 
         document.addEventListener('keydown', (event) => {
             switch (event.keyCode) {
                 case 37:
                     location.href = left.href;
                     break;
-            
+
                 case 39:
                     location.href = right.href;
                     break;
-                
+
                 case 32:
                     location.href = reset.href;
                     break;
             }
         });
-
     </script>
 </body>
 
