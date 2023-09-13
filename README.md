@@ -1,20 +1,26 @@
-# 萬年曆作業
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://www.php.net/images/logos/php-logo.svg" width="400" alt="Laravel Logo"></a></p>
 
-## 作業說明
-1. 請以PHP程式撰寫一個萬年曆系統
-2. 提供連結可以切換不同的月份
-3. 善用目前為止學會的html標籤來建構內容
-4. 善用目前為止學會的CSS來美化畫面
-5. 可加入圖片但要注意檔案格式、大小、傳輸速度及智財權問題
-6. 可加入影音但要注意檔案大小、傳輸速度、及是否會對用戶造成干擾
-7. 首頁請命名為 **index.php**
+## [Calendar](https://wda.mackliu.com/s1120210/calendar/)
 
-## 參考作品
-* [109年度第一期](http://220.128.133.15/mackliu/10901/calendar/)
-* [109年度第二期](http://220.128.133.15/mackliu/10902)
-* [110年度第一期](http://220.128.133.15/mackliu/11001)
-* [110年度第二期](http://220.128.133.15/mackliu/11002)
-* [111年度第一期](http://220.128.133.15/mackliu/calendar/11101/)
+萬年曆，查看特定年份日期
 
-## 完成期限
-* 老師交代作業後兩周(含假日共14天)
+## Installation
+
+- 顯示日期和星期：可以顯示任意日期的星期幾，並列出每月的所有日期。
+- 月份和年份跳轉：快速查看過去或未來的月份和年份。
+- 節假日和紀念日提示：標記並提示各種節假日和紀念日。
+- 事件和提醒：允許用戶在特定日期設置事件、生日或其他提醒。
+
+## Use
+
+- 可以使用鍵盤左鍵(left click)和右鍵(Right click)切換月份/空白鍵(space)回到當天日期。
+
+## Skill
+
+<p align="center">
+<img align="left" src="https://img.shields.io/badge/-Php-777BB4?logo=php&logoColor=white&logoWidith=200&style=for-the-badge"/>
+<img align="left" src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge"/>
+<img align="left" src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge"/>
+<img align="left" src="https://img.shields.io/badge/-CSS3-3776AB?logo=css3&logoColor=white&style=for-the-badge"/>
+</p>
+
